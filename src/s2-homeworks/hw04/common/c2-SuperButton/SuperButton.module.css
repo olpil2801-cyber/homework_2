@@ -1,0 +1,85 @@
+.button {
+  min-width: 165px;
+  height: 38px;
+  padding: 0 28px;
+  box-sizing: border-box;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.secondary {
+  background-color: #ffffff;
+  border-color: #0066b3;
+  color: #0066b3;
+}
+
+.default {
+  background-color: #0066cc;
+  border-color: #0066cc;
+  color: #ffffff;
+}
+
+.red {
+  background-color: #cc0033;
+  border-color: #cc0033;
+  color: #ffffff;
+}
+
+/* Наведение — только для доступных кнопок. */
+
+.default:hover:not(:disabled) {
+  background-color: #0055aa;
+  border-color: #0055aa;
+}
+
+.red:hover:not(:disabled) {
+  background-color: #b3002d;
+  border-color: #b3002d;
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: #e6f2ff;
+}
+
+/* Нажатие — только для доступных кнопок. */
+
+.default:active:not(:disabled) {
+  background-color: #004488;
+  border-color: #004488;
+}
+
+.secondary:active:not(:disabled) {
+  background-color: #cce5ff;
+}
+
+.red:active:not(:disabled) {
+  background-color: #990026;
+  border-color: #990026;
+}
+
+/* Видимый фокус при навигации клавиатурой. */
+
+.button:focus-visible {
+  outline: 2px solid #0066b3;
+  outline-offset: 3px;
+}
+
+/* Отключённое состояние. */
+
+.disabled,
+.button:disabled {
+  background-color: #80a4c7;
+  border-color: #80a4c7;
+  color: #8e9fae;
+  cursor: not-allowed;
+}
